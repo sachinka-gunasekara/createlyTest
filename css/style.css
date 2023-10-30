@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+/* VARIABLES */
+
+:root {
+  /* FONTS */
+  --FF: "Roboto", sans-serif;
+  --FF-HEADINGS: "Poppins", sans-serif;
+
+  /* COLORS */
+  --PRIMARY-COLOR: #64c5b4;
+  --BTN-PCOLOR: #edb013;
+  --BTN-SCOLOR: #0b64a0;
+  --FONT-PRIMARY: #04263d;
+  --FONT-SECONDARY: #7e7e7e;
+  --FONT-DISABLED: #aaaaaa;
+
+  /* FONT SIZES */
+  --FS-H1: 45px;
+  --FS-H2: 20px;
+  --FS-H3: 16px;
+  --FS-PARA: 14px;
+}
+
+.tabs {
+  border: 2px solid #d9e6ff;
+  display: flex;
+  margin: 40px;
+}
+
+.tabs__sidebar {
+  width: 300px;
+  flex-shrink: 0;
+  /* background-color: #cccccc; */
+  padding: 0px 20px 0px 20px ;
+}
+
+.tabs__button {
+  display: block;
+  padding: 10px;
+  /* background: #eeeeee; */
+  border: none;
+  width: 100%;
+  outline: none;
+  cursor: pointer;
+}
+
+.tabs__button:active {
+  background: #dddddd;
+}
+
+.tabs__button:not(:last-of-type) {
+  border-bottom: 2px solid #d9e6ff;
+  border-right: 5px solid #e5e5e5;
+}
+
+.tabs__button--active {
+  font-weight: bold;
+  border-right: 5px solid #51c0aa;
+  background: #ffffff;
+}
+
+.tabs__content {
+  padding: 15px;
+  font-size: 0.8rem;
+  display: none;
+}
+
+.tabs__content__title {
+  font-family: var(--FF-HEADINGS);
+  font-size: var(--FS-H3);
+  font-weight: bold;
+}
+
+.tabs__content--active {
+  display: block;
+}
+
+.tabs__content > :first-child { 
+  margin-top: 0;
+}
+
