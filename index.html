@@ -8,30 +8,13 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
 
 <style>
-  body {
-    /* background-image: url('assets/header_bg.svg');
-    background-size: cover; 
-    background-repeat: no-repeat;
-    background-attachment: fixed	;  */
-     /* margin-top: 30px;
-    margin-left: 260px; 
-    margin-right: 260px; */
-  }
-
   .hero_section {
-    background-image: url('assets/header_bg.svg');
-    background-size: cover; /* Adjust background size as needed */
-    background-repeat: no-repeat;
-    background-attachment: local	; 
-    /* margin-top: 30px;
-    margin-left: 260px; 
-    margin-right: 260px; */
+   margin-left: var(--MARGIN-L);
+   margin-right: var(--MARGIN-R);
   }
 
   .main_container {
       margin-top: 30px;
-    margin-left: 260px; 
-    margin-right: 260px;
   }
   
   ul {
@@ -44,7 +27,8 @@
 
   .first-list a {
     text-decoration: none; 
-    color: #000; /* Set link color */
+    color: #000;
+    font-family: var(--FF);
   }
 
   .btn {
@@ -56,6 +40,7 @@
   font-size: var(--FS-H3);
   transition: 0.3s;
   border-radius: 4px;
+  cursor: pointer;
 }
 
   .btn-large{
@@ -93,7 +78,7 @@
   .hero-second {
   margin: 0 auto;
   text-align: center;
-  margin-top: 180px;
+  /* margin-top: 180px; */
   }
 
   .title {
@@ -115,11 +100,12 @@
 
   .icon {
       vertical-align: middle;
-      margin-right: 30px; /* Add some spacing between the icon and text */
+      margin-right: 30px; 
   }
 
   .second-list li {
     margin-bottom: 30px;
+    font-family: var(--FF);
   }
 
   .hero-list {
@@ -146,6 +132,8 @@
 
 .bottom-section {
   margin-top: 100px;
+  margin-left: var(--MARGIN-L);
+  margin-right: var(--MARGIN-R);
 }
 
 .bold-text {
@@ -156,19 +144,49 @@
 
 .normal-text {
   font-size: var(--FS-PARA);
+  text-align: left;
+  font-family: var(--FF);
+}
+
+.tabs{
+  margin-left: var(--MARGIN-L);
+   margin-right: var(--MARGIN-R);
+}
+
+.tab-list {
+  color: var(--FONT-PRIMARY);
 }
 
 .footer {
-  /* background-image: url('assets/header_bg.svg'); */
-    background-size: contain; /* Adjust background size as needed */
-    background-repeat: no-repeat;
-    background-attachment: fixed	; 
+  background-image: url('assets/header_bg.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: local; 
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.footer_style {
-  margin-top: 30px;
-    margin-left: 260px; 
-    margin-right: 260px;
+.footer-text {
+ font-family: var(--FF);
+ color: var(--FONT-DISABLED);
+}
+
+.hero-img {
+  background-image: url('assets/header_bg.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: local;
+  height: 1000px;
+}
+
+.first-item {
+  text-decoration: underline solid var(--PRIMARY-COLOR) 4px;
+}
+
+.second-item:hover {
+  text-decoration: underline solid var(--FONT-DISABLED) 4px;
 }
 
 </style>
@@ -176,39 +194,41 @@
 
 <body>
   <div class="main_container">
-    <div class="hero_section">
-      <div class="row">
-        <div class="col-md-6">
-          <img src="assets/creately_logo.svg" alt="creately" width="166">
+    <div class="hero-img">
+      <div class="hero_section">
+        <div class="row">
+          <div class="col-md-6">
+            <img src="assets/creately_logo.svg" alt="creately" width="166">
+          </div>
+          <div class="col-md-6">
+            <ul class="first-list d-flex justify-content-between">
+              <li class="first-item"><a href="#home">Home</a></li>
+              <li class="second-item"><a href="#product">Product</a></li>
+              <li class="second-item"><a href="#pricing">Pricing</a></li>
+              <li><button class="btn">Sign Up</button></li>
+            </ul>
+          </div>
         </div>
-        <div class="col-md-6">
-          <ul class="first-list d-flex justify-content-between">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#product">Product</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><button class="btn">Sign Up</button></li>
-          </ul>
-        </div>
-      </div>
 
-      <div class="hero">
-        <span class="hero_title">Your Visual Collaboration Workspace</span>
-        <span class="hero_subtitle">Plan, brainstorm, analyze or design anything together.</span>
-      </div>
-
-      <div class="row">
-        <div class="hero-list col-md-6">
-          <ul class="second-list">
-            <li><img src="assets/icon_1.svg" alt="Infinite Icon" class="icon">Infinite Visual Canvas</li>
-            <li><img src="assets/icon_2.svg" alt="Infinite Icon" class="icon">1000's of Visual Templates</li>
-            <li><img src="assets/icon_3.svg" alt="Infinite Icon" class="icon">Business & Technical Diagramming</li>
-            <li><img src="assets/icon_4.svg" alt="Infinite Icon" class="icon">Video Conferencing</li>
-            <li><button class="btn btn-large">Get Started</button></li>
-          </ul>
+        <div class="hero">
+          <span class="hero_title">Your Visual Collaboration Workspace</span>
+          <span class="hero_subtitle">Plan, brainstorm, analyze or design anything together.</span>
         </div>
-        <div class="col-md-6">
-          <object data="assets/animation_vector.svg" width="600">
-          </object>
+
+        <div class="row">
+          <div class="hero-list col-md-6">
+            <ul class="second-list">
+              <li><img src="assets/icon_1.svg" alt="Infinite Icon" class="icon">Infinite Visual Canvas</li>
+              <li><img src="assets/icon_2.svg" alt="Infinite Icon" class="icon">1000's of Visual Templates</li>
+              <li><img src="assets/icon_3.svg" alt="Infinite Icon" class="icon">Business & Technical Diagramming</li>
+              <li><img src="assets/icon_4.svg" alt="Infinite Icon" class="icon">Video Conferencing</li>
+              <li><button class="btn btn-large">Get Started</button></li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <object data="assets/animation_vector.svg" width="600">
+            </object>
+          </div>
         </div>
       </div>
     </div>
@@ -225,17 +245,17 @@
     <div class="tabs">
       <div class="tabs__sidebar">
         <button class="tabs__button" data-for-tab="1">
-          <span class="bold-text">Infinite Visual Canvas</span>
+          <span class="bold-text" style="margin-left: -100px;">Infinite Visual Canvas</span>
           <p class="normal-text">Powerful yet flexible at its core, Creately can be adapted to any kind of workflow and connects
             with a multitude of popular platforms.</p>
         </button>
         <button class="tabs__button" data-for-tab="2">
-          <span class="bold-text">Collaboration</span>
+          <span class="bold-text" style="margin-left: -170px;">Collaboration</span>
           <p class="normal-text">Work and collaborate however you want. Creately’s capabilities are non-opinionated and are
             highly customizable</p>
         </button>
         <button class="tabs__button" data-for-tab="3">
-          <span class="bold-text">Draw Anything</span>
+          <span class="bold-text" style="margin-left: -160px;">Draw Anything</span>
           <p class="normal-text">From flowcharts to technical UML diagrams or annotating a screenshot, drawing on top of it or a
             quick sketch of your idea, Creately is the one tool to handle this all.</p>
         </button>
@@ -246,26 +266,34 @@
         <p class="normal-text">
           Powerful yet flexible at its core, Creately can be adapted to any kind of workflow and
           connects with a multitude of popular platforms.
-          <ul style="list-style-type: disc;">
-            <li>1000s of Smart Shapes</li>
-            <span>Specialized shapes for 70 diagram types and an extensible library helps you
-              visualize virtually anything.</span> 
-            <li>Easy drawing shortcuts</li>
-            <span>Create shapes and connectors in a single interaction. Apply formatting and
-              changes with the quick toolbar and more.</span> 
-            <li>Themes & Styles (Coming Soon)</li>
-            <span> Use predefined styles and formatting options to make your content shine.</span>
+          <ul class="normal-text" style="list-style-type: disc;">
+            <div style="margin-bottom: 20px;">
+              <li class="tab-list">1000s of Smart Shapes</li>
+              <span>Specialized shapes for 70 diagram types and an extensible library helps you
+                visualize virtually anything.</span> 
+            </div>
+            <div style="margin-bottom: 20px;">
+              <li class="tab-list">Easy drawing shortcuts</li>
+              <span>Create shapes and connectors in a single interaction. Apply formatting and
+                changes with the quick toolbar and more.</span> 
+            </div>
+            <div style="margin-bottom: 20px;">
+              <li class="tab-list">Themes & Styles (Coming Soon)</li>
+              <span> Use predefined styles and formatting options to make your content shine.</span>
+            </div>
             
           </ul>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-          has been the industry's standard dummy text ever since the 1500s, when an unknown
-          printer took a galley of type and scrambled it to make a type specimen book. It has
-          survived not only five centuries, but also the leap into electronic typesetting, remaining
-          essentially unchanged. It was popularized in the 1960s with the release of Letraset
-          sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-          software like Aldus PageMaker including versions of Lorem.
+          <p class="normal-text">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+            has been the industry's standard dummy text ever since the 1500s, when an unknown
+            printer took a galley of type and scrambled it to make a type specimen book. It has
+            survived not only five centuries, but also the leap into electronic typesetting, remaining
+            essentially unchanged. It was popularized in the 1960s with the release of Letraset
+            sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+            software like Aldus PageMaker including versions of Lorem.
+          </p>
         </p>
-      </div>
+      </div>
 
       <div class="tabs__content" data-tab="2">
         <span class="tabs__content__title">Collaboration</span>
@@ -335,19 +363,19 @@
       <div class="row">
         <div class="col-md-4">
           <div class="flex-column">
-            <p style="color: #848484;">Powerful yet flexible at its core, Creately can be adapted to any kind of workflow and connects
+            <p class="normal-text" style="color: #848484;">Powerful yet flexible at its core, Creately can be adapted to any kind of workflow and connects
               with a multitude of popular platforms.</p>
           </div>
         </div>
         <div class="col-md-4">
           <div class="flex-column">
-            <p style="color: #848484;">Work and collaborate however you want. Creately’s capabilities are non-opinionated and are
+            <p class="normal-text" style="color: #848484;">Work and collaborate however you want. Creately’s capabilities are non-opinionated and are
               highly customizable.</p>
           </div>
         </div>
         <div class="col-md-4">
           <div class="flex-column">
-            <p style="color: #848484;">From flowcharts to technical UML diagrams or annotating a screenshot, drawing on top of it or a
+            <p class="normal-text" style="color: #848484;">From flowcharts to technical UML diagrams or annotating a screenshot, drawing on top of it or a
               quick sketch of your idea, Creately is the one tool to handle this all.</p>
           </div>
         </div>
@@ -372,65 +400,49 @@
         </div>
       </div>
     </div>
-    
-
-  <!-- <div class="footer">
-    <img src="assets/header_bg.svg" alt="footer">
-    <div class="footer_style row">
-      <div class="col-md-9">
-        <span>Contact Support : support@creately.com</span>
-      </div>
-      <div class="col-md-3">
-        <img src="assets/creately_logo.svg" alt="creately" width="166">
-      </div>
-    </div>
-  </div> -->
 
   <div class="footer">
-    <img src="assets/header_bg.svg" alt="footer">
-    <div class="footer_style row">
+    <div class="row" style="display: flex; align-items: center;">
       <div class="col-md-9">
-        <span>Contact Support: support@creately.com</span>
+        <span class="footer-text">Contact Support: support@creately.com</span>
       </div>
       <div class="col-md-3">
-        <img src="assets/creately_logo.svg" alt="creately" width="166">
+        <img src="assets/creately_logo.svg" alt="creately" width="166" style="margin-right: 500px;">
       </div>
     </div>
   </div>
   
-
-
-    <script>
-      function setupTabs () {
-        document.querySelectorAll(".tabs__button").forEach(button => {
-          button.addEventListener("click", () => {
-            const sideBar = button.parentElement;
-            const tabsContainer = sideBar.parentElement;
-            const tabNumber = button.dataset.forTab;
-            const tabToActivate = tabsContainer.querySelector(`.tabs__content[data-tab="${tabNumber}"]`);
-          
-            sideBar.querySelectorAll(".tabs__button").forEach(button => {
-              button.classList.remove("tabs__button--active");
-            });
-
-            tabsContainer.querySelectorAll(".tabs__content").forEach(tab => {
-              tab.classList.remove("tabs__content--active");
-            });
-
-            button.classList.add("tabs__button--active");
-            tabToActivate.classList.add("tabs__content--active");
-          });
-        });
-      }
-
-      document.addEventListener("DOMContentLoaded", () => {
-        setupTabs();
-
-        document.querySelectorAll(".tabs").forEach(tabsContainer => {
-          tabsContainer.querySelector(".tabs__sidebar .tabs__button").click();
-        });
+  <script>
+    function setupTabs () {
+      document.querySelectorAll(".tabs__button").forEach(button => {
+        button.addEventListener("click", () => {
+          const sideBar = button.parentElement;
+          const tabsContainer = sideBar.parentElement;
+          const tabNumber = button.dataset.forTab;
+          const tabToActivate = tabsContainer.querySelector(`.tabs__content[data-tab="${tabNumber}"]`);
         
+          sideBar.querySelectorAll(".tabs__button").forEach(button => {
+            button.classList.remove("tabs__button--active");
+          });
+
+          tabsContainer.querySelectorAll(".tabs__content").forEach(tab => {
+            tab.classList.remove("tabs__content--active");
+          });
+
+          button.classList.add("tabs__button--active");
+          tabToActivate.classList.add("tabs__content--active");
+        });
       });
-    </script>
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      setupTabs();
+
+      document.querySelectorAll(".tabs").forEach(tabsContainer => {
+        tabsContainer.querySelector(".tabs__sidebar .tabs__button").click();
+      });
+      
+    });
+  </script>
 </body>
 </html>

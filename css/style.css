@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
 
 /* VARIABLES */
 
@@ -21,6 +21,10 @@
   --FS-H2: 20px;
   --FS-H3: 16px;
   --FS-PARA: 14px;
+
+  /* MARGINS */
+  --MARGIN-L: 260px;
+  --MARGIN-R: 260px;
 }
 
 .tabs {
@@ -32,14 +36,13 @@
 .tabs__sidebar {
   width: 300px;
   flex-shrink: 0;
-  /* background-color: #cccccc; */
   padding: 0px 20px 0px 20px ;
 }
 
 .tabs__button {
   display: block;
   padding: 10px;
-  /* background: #eeeeee; */
+  background: white;
   border: none;
   width: 100%;
   outline: none;
@@ -52,11 +55,9 @@
 
 .tabs__button:not(:last-of-type) {
   border-bottom: 2px solid #d9e6ff;
-  border-right: 5px solid #e5e5e5;
 }
 
 .tabs__button--active {
-  font-weight: bold;
   border-right: 5px solid #51c0aa;
   background: #ffffff;
 }
